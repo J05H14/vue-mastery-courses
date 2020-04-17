@@ -13,12 +13,13 @@
             <div class = product>
 
                 <div class='product-image'>
-                    <img src='./assests/vmSocks.jpg' />
+                    <img :src= 'image'/> <!-- v-bind:src short hand = :src -->
                 </div>
 
                 <div class='product-info'>
                     <h1>{{product}}</h1>
                     <p>{{desc}}</p>
+                    <a :href='google_link'>Go to Google.com</a>
                 </div>
 
             </div>
