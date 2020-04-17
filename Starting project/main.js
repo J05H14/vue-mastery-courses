@@ -11,13 +11,27 @@ var app = new Vue({ //creates a new vue instance Vue({options})
         variants: [
             {
                 variantId: 2234,
-                variantColor: 'green'
+                variantColor: 'green',
+                variantImage: './assests/vmSocks.jpg'
             },
             {
                 variantID: 2235,
-                variantColor: 'blue'
+                variantColor: 'blue',
+                variantImage: './assests/vmSocks-blue.jpg'
             }
         ],
-        sizes: ['Small', 'Medium', 'Large', 'Extra Large']
+        sizes: ['Small', 'Medium', 'Large', 'Extra Large'],
+        cart: 0
+    },
+    methods:{
+        addToCart: function(){
+            this.cart += 1;
+        },
+        removeFromCart: function(){
+            this.cart -=1;
+        },
+        updateProduct: function(variantImage){
+            this.image = variantImage;
+        }
     }
 });
